@@ -31,3 +31,9 @@ while   line:
 
 fin.close()
 fou.close()
+
+os.system('rm *.aux')
+os.system('rm */*.aux')
+os.system('rm *.log')
+os.system('rm *.out')
+os.system('rm *.toc')
