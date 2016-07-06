@@ -21,15 +21,19 @@ CMD_FLG=`ps aux | grep "pdflatex seven-hulus-main.tex" | grep -v "grep" | awk '{
 
 if [ -z "${CMD_FLG}" ]
 then
+    echo    "pdflatex exited in time."
     CMD_RST=`cat ./log.make.txt | grep -E "Error|ERROR"`
     if [ -z "${CMD_RST}" ]
     then
+        echo    "build successfully."
         svn ci -m "Automatical build."
     else
+        echo    "rebuild failed."
         echo    "Failed to build." | mail -s "Seven-hulus: Rebuld FAILED"   liu-xj12@mails.tsinghua.edu.cn  yuanzhigang10@163.com
     fi
 else
     kill -9 ${CMD_FLG}
+    echo    "pdflatex killed."
     echo    "Failed to build." | mail -s "Seven-hulus: Rebuld FAILED"   liu-xj12@mails.tsinghua.edu.cn  yuanzhigang10@163.com
     exit
 fi
