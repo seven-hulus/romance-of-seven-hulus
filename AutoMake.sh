@@ -22,7 +22,7 @@ CMD_FLG=`ps aux | grep "pdflatex seven-hulus-main.tex" | grep -v "grep" | awk '{
 if [ -z "${CMD_FLG}" ]
 then
     echo    "pdflatex exited in time."
-    CMD_RST=`cat ./log.make.txt | grep -E "Error|ERROR"`
+    CMD_RST=`cat ./log.make.txt | grep -E "Error|ERROR|error"`
     if [ -z "${CMD_RST}" ]
     then
         echo    "build successfully."
