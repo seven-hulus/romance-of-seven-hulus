@@ -18,12 +18,12 @@ fi
 CMD_RST=`nohup ./Makefile.py 1>log.make.txt 2>&1`
 sleep 60
 CMD_FLG=`ps aux | grep "pdflatex seven-hulus-main.tex" | grep -v "grep" | awk '{ print $2 }'`
-kill -9 ${CMD_FLG}
 
 if [ -z "${CMD_FLG}" ]
 then
     svn ci -m "Automatical build."
 else
+    kill -9 ${CMD_FLG}
     echo    "Failed to build." | mail -s "Seven-hulus: Rebuld FAILED"   liu-xj12@mails.tsinghua.edu.cn  yuanzhigang10@163.com
     exit
 fi
