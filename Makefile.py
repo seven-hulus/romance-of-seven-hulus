@@ -4,11 +4,11 @@
 import  os
 import  re
 
-os.system('pdflatex main.tex')
-os.system('pdflatex main.tex')
-os.system('pdflatex main.tex')
+os.system('pdflatex ./seven-hulus-main.tex')
+os.system('pdflatex ./seven-hulus-main.tex')
+os.system('pdflatex ./seven-hulus-main.tex')
 
-fin     =   open("main.toc")
+fin     =   open("seven-hulus-main.toc")
 fou     =   file("README.md", "w+")
 
 fou.write("# 七葫拍案惊奇\n\n")
