@@ -1,5 +1,7 @@
 # 七葫拍案惊奇
 
+> 新窝：[The 7 Hulus](http://hulus.party)
+
 - Preface
 - Acknowledgement
 - 楔子 穿山甲误走蛇蝎怪 盘古氏结缘葫芦藤
